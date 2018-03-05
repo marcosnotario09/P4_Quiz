@@ -149,12 +149,12 @@ exports.testCmd = (rl, id) => {
 
 			rl.question(colorize(`Pregunta: ${quiz.question} =>`, 'red'), answer => {
 				if((answer.toLowerCase().trim()) === ((quiz.answer).toLowerCase().trim())) {
-					log('Su respuesta es:');
-					biglog('CORRECTO', 'green');
+					log('Respuesta correcta');
+					
 				} 
 				else {
-					log('Su respuesta es:');
-					biglog('INCORRECTO', 'red');
+					log('Respuesta incorrecta:');
+					
 				}
 				rl.prompt();
 			});
