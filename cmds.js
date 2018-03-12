@@ -259,8 +259,7 @@ exports.playCmd = rl => {
 		
 
 			if(toBePlayed.length <= 0) {
-			log("ENHORABUENA, acertaste todas", 'green');
-			log(`Has conseguido ${score} aciertos`, 'magenta');
+			//console.log("sacabo");
 			return; // para acaabr la funcion
 			}
 
@@ -273,14 +272,12 @@ exports.playCmd = rl => {
 			.then(answer => {
 				if (answer.toLowerCase().trim() === quiz.answer.toLowerCase().trim()) {
 					score++;
-					log("CORRECTO, ANIMO", 'green');
-					log(` Llevas ${score} acierto`, 'green');
-					return playOne();
+					console.log("animo");
+					return playOne());
 
 				} else {
-					log("INCORRECTO", 'red');
-					log("FIN DEL JUEGO", 'red');
-					log(`Has conseguido solo ${score} acierto`, 'red');
+					log("cincorrecot");
+					log("fin")
 					
 				}
 
@@ -306,7 +303,6 @@ exports.playCmd = rl => {
 
 	})
 };
-
 
 /**
 *Muestra los nombres de los autores de la práctica.
